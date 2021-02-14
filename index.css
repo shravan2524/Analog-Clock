@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: #d7e3ee;
+}
+body {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+}
+.clock{
+    background-image: url(clock.png);
+    background-color: #d7e3ee;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 140px;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    border: 0.1px solid black;
+    border-radius: 207px;
+    box-shadow: 1px 1px 20px  #dfd6d6 inset,
+                -2px -2px 20px #808080 ,
+                2px -2px 20px #807a7a inset,
+                -2px 2px 20px #808080 ;
+    /* box-shadow: 1px 1px 20px  #808080 ,
+                -2px -2px 20px #808080,
+                2px -2px 20px #808080 ,
+                -2px 2px 20px #808080; */
+}
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    top: 58%;
+    left: 49.5%;
+    z-index: 10000;
+}
+body.light .clock:before {
+    background: white;
+}
+body.light .clock:before {
+    background: white;
+}
+#hr{
+    width: 0.5rem;
+    height: 5rem;
+    position: absolute;
+    top: 45%;
+    left: 49.73%;
+    background-color: red;
+    transform-origin: bottom;
+    border-radius: 100% 100% 0 0;
+}
+#min{
+    width: 0.4rem;
+    height: 7.5rem;
+    position: absolute;
+    top: 38.5%;
+    left: 49.77%;
+    background-color: black;
+    transform-origin: bottom;
+    border-radius: 25%;
+}
+#sec{
+    width: 0.2rem;
+    height: 9rem;
+    position: absolute;
+    top: 34%;
+    left: 49.87%;
+    background-color: black;
+    transform-origin: bottom;
+    ;
+}
+
+body.light {
+    background: rgba(2, 12, 11, 0.89);
+}
+/* body.light .clock {
+    box-shadow: 1px 1px 20px  #808080 inset,
+                -2px -2px 20px #808080 inset,
+                2px -2px 20px #808080 inset,
+                -2px 2px 20px #808080 inset;
+} */
+.toggleClass {
+    position: absolute;
+    top: 35px;
+    right: 150px;
+    width: 20px;
+    margin: 2px;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: black;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.toggleClass:before {
+    position: absolute;
+    content: 'Dark Mode';
+    white-space: nowrap;
+    left: 25px;
+}
+
+body.light .toggleClass {
+    background: #d7e3ee;
+    color: #d7e3ee;
+    content: 'Light Mode';
+}
+
+
+body.light .toggleClass:before {
+    content: 'Light Mode';
+    white-space: nowrap;
+}
